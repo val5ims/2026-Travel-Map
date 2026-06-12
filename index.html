@@ -28,11 +28,58 @@
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // ✅ test marker (proves everything works)
-  L.marker([45.4215, -75.6972])
-    .addTo(map)
-    .bindPopup("Ottawa test marker")
-    .openPopup();
+  // ✅ keep test marker (so you always know map works)
+L.marker([45.4215, -75.6972])
+  .addTo(map)
+  .bindPopup("Ottawa test marker");
+
+// ✅ Add your CSV data
+fetch("travel_data.csv")
+  .then(response => response.text())
+  .then(data => {
+    const rows = data.split("\n").slice(1);
+
+    rows.forEach(row => {
+      const cols = row.split(",");
+
+      if (cols.length < 8) return;
+
+      const name = cols[1];
+      const city = cols[2];
+      const province = cols[3];
+      const conference = cols[7];
+
+      if (!city || city.trim() === "") return;
+
+      // Hardcoded coordinates for speed & reliability
+      const locations = {
+        "Ottawa": [45.4215, -75.6972],
+        "Toronto": [43.65107, -79.347015],
+        "Montreal": [45.5017, -73.5673],
+        "Vancouver": [49.2827, -123.1207],
+        "Halifax": [44.6488, -63.5752],
+        "Calgary": [51.0447, -114.0719],
+        "Edmonton": [53.5461, -113.4938],
+        "Winnipeg": [49.8951, -97.1384],
+        "Regina": [50.4452, -104.6189],
+        "Québec": [46.8139, -71.2080],
+        "Kingston": [44.2312, -76.4860],
+        "Banff": [51.1784, -115.5708],
+        "St. John's": [47.5615, -52.7126]
+      };
+
+      if (locations[city]) {
+        const coords = locations[city];
+
+        L.marker(coords).addTo(map)
+          .bindPopup(`
+            <b>${name}</b><br>
+            ${city}, ${province}<br>
+            ${conference}
+          `);
+      }
+    });
+  });
 </script>
 
 </body>
