@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Canada Map</title>
+  <title>2026 Travel Map</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  https://unpkg.com/leaflet/dist/leaflet.css
-  https://unpkg.com/leaflet/dist/leaflet.js
+  <!-- Leaflet (map library) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
   <style>
     #map {
@@ -13,17 +15,66 @@
     }
   </style>
 </head>
-
 <body>
 
 <div id="map"></div>
 
 <script>
+  // Create map centered on Canada
   var map = L.map('map').setView([56.1304, -106.3468], 4);
 
+  // Base map layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
   }).addTo(map);
+
+  // Function to get coordinates from city name
+  async function getLatLon(city, province, country) {
+    const query = `${city}, ${province}, ${country}`;
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${query}`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (data.length > 0) {
+      return [parseFloat(data[0].lat), parseFloat(data[0].lon)];
+    }
+    return null;
+  }
+
+  // Load CSV
+  fetch("travel_data.csv")
+    .then(res => res.text())
+    .then(async data => {
+      const rows = data.split("\n").slice(1);
+
+      for (const row of rows) {
+        const cols = row.split(",");
+
+        const trip = cols[0];
+        const name = cols[1];
+        const city = cols[2];
+        const province = cols[3];
+        const country = cols[4];
+        const start = cols[5];
+        const end = cols[6];
+        const conference = cols[7];
+
+        if (!city) continue;
+
+        const coords = await getLatLon(city, province, country);
+
+        if (coords) {
+          L.marker(coords).addTo(map)
+            .bindPopup(`
+              <b>${name}</b><br>
+              ${city}, ${province}<br>
+              ${conference}<br>
+              ${start} → ${end}
+            `);
+        }
+      }
+    });
 </script>
 
 </body>
