@@ -45,7 +45,48 @@ fetch("travel_data.csv")
       if (cols.length < 8) return;
 
       const name = cols[1];
-      const city = cols[2];
+      const name = cols[1]?.trim();
+const city = cols[2]?.trim();
+const province = cols[3]?.trim();
+const conference = cols[7]?.trim();
+
+if (!city) return;
+
+// Normalize city name (important fix)
+const cleanCity = city.replace("’", "'");
+
+// Location dictionary
+const locations = {
+  "Ottawa": [45.4215, -75.6972],
+  "Toronto": [43.65107, -79.347015],
+  "Montreal": [45.5017, -73.5673],
+  "Vancouver": [49.2827, -123.1207],
+  "Halifax": [44.6488, -63.5752],
+  "Calgary": [51.0447, -114.0719],
+  "Edmonton": [53.5461, -113.4938],
+  "Winnipeg": [49.8951, -97.1384],
+  "Regina": [50.4452, -104.6189],
+  "Quebec": [46.8139, -71.2080],
+  "Québec": [46.8139, -71.2080],
+  "Kingston": [44.2312, -76.4860],
+  "Banff": [51.1784, -115.5708],
+  "St. John's": [47.5615, -52.7126],
+  "St Johns": [47.5615, -52.7126]
+};
+
+if (locations[cleanCity]) {
+  const coords = locations[cleanCity];
+
+  L.marker(coords).addTo(map)
+    .bindPopup(`
+      <b>${name}</b><br>
+      ${cleanCity}, ${province}<br>
+      ${conference}
+    `);
+} else {
+  console.log("Missing city:", cleanCity);
+}
+``
       const province = cols[3];
       const conference = cols[7];
 
