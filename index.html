@@ -34,10 +34,50 @@
     .openPopup();
 
   // Load your CSV
-  fetch("travel_data.csv")
-    .then(res => res.text())
-    .then(async data => {
-      const rows = data.split("\n").slice(1);
+ fetch("travel_data.csv")
+  .then(res => res.text())
+  .then(async data => {
+    const rows = data.split("\n").slice(1);
+
+    console.log("Rows loaded:", rows.length);
+
+    for (const row of rows) {
+      const cols = row.split(",");
+
+      if (cols.length < 8) continue;
+
+      const name = cols[1];
+      const city = cols[2];
+      const province = cols[3];
+      const country = cols[4];
+      const conference = cols[7];
+
+      if (!city || city.trim() === "") continue;
+
+      console.log("Processing:", city);
+
+      const query = `${city}, ${province}, ${country}`;
+      const url = `https://nominatim.openstreetmap.org/search?format=json&q=${query}`;
+
+      try {
+        const response = await fetch(url);
+        const geo = await response.json();
+
+        if (geo.length > 0) {
+          const lat = parseFloat(geo[0].lat);
+          const lon = parseFloat(geo[0].lon);
+
+          L.marker([lat, lon]).addTo(map)
+            .bindPopup(`<b>${name}</b><br>${city}<br>${conference}`);
+        } else {
+          console.log("No location found:", city);
+        }
+
+      } catch (e) {
+        console.log("Error fetching location:", e);
+      }
+    }
+  });
 
       for (const row of rows) {
         const cols = row.split(",");
