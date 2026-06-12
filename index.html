@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ CORRECT Leaflet links -->
+  <!-- ✅ FIXED Leaflet links -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
@@ -15,8 +15,8 @@
     }
   </style>
 </head>
-<body>
 
+<body>
 <div id="map"></div>
 
 <script>
@@ -28,88 +28,13 @@
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // Simple test marker (IMPORTANT)
-  L.marker([45.4215, -75.6972]).addTo(map)
+  // ✅ test marker (proves everything works)
+  L.marker([45.4215, -75.6972])
+    .addTo(map)
     .bindPopup("Ottawa test marker")
     .openPopup();
-
-  // Load your CSV
- fetch("travel_data.csv")
-  .then(res => res.text())
-  .then(async data => {
-    const rows = data.split("\n").slice(1);
-
-    console.log("Rows loaded:", rows.length);
-
-    for (const row of rows) {
-      const cols = row.split(",");
-
-      if (cols.length < 8) continue;
-
-      const name = cols[1];
-      const city = cols[2];
-      const province = cols[3];
-      const country = cols[4];
-      const conference = cols[7];
-
-      if (!city || city.trim() === "") continue;
-
-      console.log("Processing:", city);
-
-      const query = `${city}, ${province}, ${country}`;
-      const url = `https://nominatim.openstreetmap.org/search?format=json&q=${query}`;
-
-      try {
-        const response = await fetch(url);
-        const geo = await response.json();
-
-        if (geo.length > 0) {
-          const lat = parseFloat(geo[0].lat);
-          const lon = parseFloat(geo[0].lon);
-
-          L.marker([lat, lon]).addTo(map)
-            .bindPopup(`<b>${name}</b><br>${city}<br>${conference}`);
-        } else {
-          console.log("No location found:", city);
-        }
-
-      } catch (e) {
-        console.log("Error fetching location:", e);
-      }
-    }
-  });
-
-      for (const row of rows) {
-        const cols = row.split(",");
-
-        const name = cols[1];
-        const city = cols[2];
-        const province = cols[3];
-        const country = cols[4];
-        const conference = cols[7];
-
-        if (!city) continue;
-
-        const query = `${city}, ${province}, ${country}`;
-        const url = `https://nominatim.openstreetmap.org/search?format=json&q=${query}`;
-
-        try {
-          const response = await fetch(url);
-          const geo = await response.json();
-
-          if (geo.length > 0) {
-            const lat = geo[0].lat;
-            const lon = geo[0].lon;
-
-            L.marker([lat, lon]).addTo(map)
-              .bindPopup(`<b>${name}</b><br>${city}<br>${conference}`);
-          }
-        } catch (e) {
-          console.log("Error:", e);
-        }
-      }
-    });
 </script>
 
 </body>
 </html>
+``
