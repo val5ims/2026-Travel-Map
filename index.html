@@ -5,13 +5,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ FIXED Leaflet links -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- ✅ Proper Leaflet links -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
   <style>
     #map {
       height: 100vh;
+      width: 100%;
     }
   </style>
 </head>
@@ -20,109 +21,82 @@
 <div id="map"></div>
 
 <script>
-  // Create map
+
+  // ✅ Create map (Canada)
   var map = L.map('map').setView([56.1304, -106.3468], 4);
 
-  // Base layer
+  // ✅ Base map
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // ✅ keep test marker (so you always know map works)
-L.marker([45.4215, -75.6972])
-  .addTo(map)
-  .bindPopup("Ottawa test marker");
+  // ✅ ALWAYS show this test marker
+  L.marker([45.4215, -75.6972])
+    .addTo(map)
+    .bindPopup("Ottawa (test marker)");
 
-// ✅ Add your CSV data
-fetch("travel_data.csv")
-  .then(response => response.text())
-  .then(data => {
-    const rows = data.split("\n").slice(1);
+  // ✅ Predefined city locations (reliable)
+  const locations = {
+    "Ottawa": [45.4215, -75.6972],
+    "Toronto": [43.65107, -79.347015],
+    "Montreal": [45.5017, -73.5673],
+    "Vancouver": [49.2827, -123.1207],
+    "Halifax": [44.6488, -63.5752],
+    "Calgary": [51.0447, -114.0719],
+    "Edmonton": [53.5461, -113.4938],
+    "Winnipeg": [49.8951, -97.1384],
+    "Regina": [50.4452, -104.6189],
+    "Québec": [46.8139, -71.2080],
+    "Quebec": [46.8139, -71.2080],
+    "Kingston": [44.2312, -76.4860],
+    "Banff": [51.1784, -115.5708],
+    "St. John's": [47.5615, -52.7126],
+    "St Johns": [47.5615, -52.7126]
+  };
 
-    rows.forEach(row => {
-      const cols = row.split(",");
+  // ✅ Load your CSV safely
+  fetch("travel_data.csv")
+    .then(response => response.text())
+    .then(data => {
 
-      if (cols.length < 8) return;
+      const rows = data.split("\n").slice(1);
 
-      const name = cols[1];
-      const name = cols[1]?.trim();
-const city = cols[2]?.trim();
-const province = cols[3]?.trim();
-const conference = cols[7]?.trim();
+      rows.forEach(row => {
 
-if (!city) return;
+        const cols = row.split(",");
 
-// Normalize city name (important fix)
-const cleanCity = city.replace("’", "'");
+        if (cols.length < 8) return;
 
-// Location dictionary
-const locations = {
-  "Ottawa": [45.4215, -75.6972],
-  "Toronto": [43.65107, -79.347015],
-  "Montreal": [45.5017, -73.5673],
-  "Vancouver": [49.2827, -123.1207],
-  "Halifax": [44.6488, -63.5752],
-  "Calgary": [51.0447, -114.0719],
-  "Edmonton": [53.5461, -113.4938],
-  "Winnipeg": [49.8951, -97.1384],
-  "Regina": [50.4452, -104.6189],
-  "Quebec": [46.8139, -71.2080],
-  "Québec": [46.8139, -71.2080],
-  "Kingston": [44.2312, -76.4860],
-  "Banff": [51.1784, -115.5708],
-  "St. John's": [47.5615, -52.7126],
-  "St Johns": [47.5615, -52.7126]
-};
+        const name = cols[1] ? cols[1].trim() : "";
+        const city = cols[2] ? cols[2].trim() : "";
+        const province = cols[3] ? cols[3].trim() : "";
+        const conference = cols[7] ? cols[7].trim() : "";
 
-if (locations[cleanCity]) {
-  const coords = locations[cleanCity];
+        if (!city) return;
 
-  L.marker(coords).addTo(map)
-    .bindPopup(`
-      <b>${name}</b><br>
-      ${cleanCity}, ${province}<br>
-      ${conference}
-    `);
-} else {
-  console.log("Missing city:", cleanCity);
-}
-``
-      const province = cols[3];
-      const conference = cols[7];
+        // Normalize text
+        const cleanCity = city.replace("’", "'");
 
-      if (!city || city.trim() === "") return;
+        // ✅ Add marker if city exists
+        if (locations[cleanCity]) {
 
-      // Hardcoded coordinates for speed & reliability
-      const locations = {
-        "Ottawa": [45.4215, -75.6972],
-        "Toronto": [43.65107, -79.347015],
-        "Montreal": [45.5017, -73.5673],
-        "Vancouver": [49.2827, -123.1207],
-        "Halifax": [44.6488, -63.5752],
-        "Calgary": [51.0447, -114.0719],
-        "Edmonton": [53.5461, -113.4938],
-        "Winnipeg": [49.8951, -97.1384],
-        "Regina": [50.4452, -104.6189],
-        "Québec": [46.8139, -71.2080],
-        "Kingston": [44.2312, -76.4860],
-        "Banff": [51.1784, -115.5708],
-        "St. John's": [47.5615, -52.7126]
-      };
+          const coords = locations[cleanCity];
 
-      if (locations[city]) {
-        const coords = locations[city];
+          L.marker(coords).addTo(map)
+            .bindPopup(
+              "<b>" + name + "</b><br>" +
+              cleanCity + ", " + province + "<br>" +
+              conference
+            );
 
-        L.marker(coords).addTo(map)
-          .bindPopup(`
-            <b>${name}</b><br>
-            ${city}, ${province}<br>
-            ${conference}
-          `);
-      }
+        } else {
+          console.log("Missing:", cleanCity);
+        }
+
+      });
+
     });
-  });
-</script>
 
+</script>
 </body>
 </html>
-``
