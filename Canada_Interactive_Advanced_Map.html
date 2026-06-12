@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/VSI/Downloads/Canada_Interactive_Advanced_Map.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <script src="./Canada_Interactive_Advanced_Map_files/leaflet.js.download"></script>
+    <script src="./Canada_Interactive_Advanced_Map_files/jquery-3.7.1.min.js.download"></script>
+    <script src="./Canada_Interactive_Advanced_Map_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./Canada_Interactive_Advanced_Map_files/leaflet.awesome-markers.js.download"></script>
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/leaflet.css">
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/all.min.css">
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/leaflet.awesome.rotate.min.css">
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <style>
+                #map_c500556dd786c5b8d615c80a450e31cb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="./Canada_Interactive_Advanced_Map_files/leaflet.markercluster.js.download"></script>
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/MarkerCluster.css">
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/MarkerCluster.Default.css">
+    <script src="./Canada_Interactive_Advanced_Map_files/jquery.min.js.download"></script>
+    <script src="./Canada_Interactive_Advanced_Map_files/jquery-ui.min.js.download"></script>
+    <script src="./Canada_Interactive_Advanced_Map_files/iso8601.min.js.download"></script>
+    <script src="./Canada_Interactive_Advanced_Map_files/leaflet.timedimension.min.js.download"></script>
+    <script src="./Canada_Interactive_Advanced_Map_files/moment.min.js.download"></script>
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/default.min.css">
+    <link rel="stylesheet" href="./Canada_Interactive_Advanced_Map_files/leaflet.timedimension.control.css">
+</head>
+<body>
+    
+    
+            <div class="folium-map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" id="map_c500556dd786c5b8d615c80a450e31cb" tabindex="0" style="outline: none;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(768px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(768px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(512px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1024px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(512px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1024px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(768px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(768px, 735px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(512px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1024px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(512px, 735px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1024px, 735px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(256px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1280px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(256px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1280px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(256px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1280px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(256px, 735px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1280px, 735px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(0px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1536px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(0px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1536px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(0px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1536px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(0px, 735px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1536px, 735px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-256px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/4(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1792px, 223px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-256px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/5(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1792px, 479px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-256px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/3(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1792px, -33px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-256px, 735px, 0px); opacity: 1;"><img alt="" src="./Canada_Interactive_Advanced_Map_files/6(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1792px, 735px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="2294" height="1138" viewBox="-191 -95 2294 1138" style="transform: translate3d(-191px, -95px, 0px);"><g><path class="leaflet-interactive" stroke="green" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="green" fill-opacity="0.2" fill-rule="evenodd" d="M937,590a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M852,580a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M1442,630a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M1319,678a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M637,601a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M1315,678a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M1438,630a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M1135,694a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M1135,694a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M1168,685a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="blue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="blue" fill-opacity="0.2" fill-rule="evenodd" d="M740,569a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="green" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="green" fill-opacity="0.2" fill-rule="evenodd" d="M1201,664a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="green" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="green" fill-opacity="0.2" fill-rule="evenodd" d="M1228,643a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="green" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="green" fill-opacity="0.2" fill-rule="evenodd" d="M637,601a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="green" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="green" fill-opacity="0.2" fill-rule="evenodd" d="M1177,666a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="green" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="green" fill-opacity="0.2" fill-rule="evenodd" d="M933,590a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="green" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="green" fill-opacity="0.2" fill-rule="evenodd" d="M1135,694a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path><path class="leaflet-interactive" stroke="green" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="green" fill-opacity="0.2" fill-rule="evenodd" d="M1135,694a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 "></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(647px, 601px, 0px); z-index: 601;"><div><span>2</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-small leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(747px, 553px, 0px); z-index: 553;"><div><span>3</span></div></div><div class="leaflet-marker-icon marker-cluster marker-cluster-medium leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(1179px, 677px, 0px); z-index: 677;"><div><span>11</span></div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="file:///C:/Users/VSI/Downloads/Canada_Interactive_Advanced_Map.html#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="file:///C:/Users/VSI/Downloads/Canada_Interactive_Advanced_Map.html#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-bar leaflet-bar-horizontal leaflet-bar-timecontrol leaflet-control"><a class="leaflet-control-timecontrol timecontrol-backward" href="file:///C:/Users/VSI/Downloads/Canada_Interactive_Advanced_Map.html#" title="Backward"></a><a class="leaflet-control-timecontrol timecontrol-play pause" href="file:///C:/Users/VSI/Downloads/Canada_Interactive_Advanced_Map.html#" title="Play"></a><a class="leaflet-control-timecontrol timecontrol-forward" href="file:///C:/Users/VSI/Downloads/Canada_Interactive_Advanced_Map.html#" title="Forward"></a><a class="leaflet-control-timecontrol timecontrol-date" href="file:///C:/Users/VSI/Downloads/Canada_Interactive_Advanced_Map.html#" title="Date">2026-06-03 20:00:00</a><div class="leaflet-control-timecontrol timecontrol-slider timecontrol-dateslider"><div class="slider"><div class="knob main" style="transform: translate3d(144.928px, 0px, 0px);"></div></div></div><div class="leaflet-control-timecontrol timecontrol-slider timecontrol-speed"><span class="speed">5fps</span><div class="slider"><div class="knob" style="transform: translate3d(27.2222px, 0px, 0px);"></div></div></div></div></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div></div>
+        
+
+<script>
+    
+    
+            var map_c500556dd786c5b8d615c80a450e31cb = L.map(
+                "map_c500556dd786c5b8d615c80a450e31cb",
+                {
+                    center: [56.0, -96.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_894e0f2393be6ed9be136bab3d01e4e7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_894e0f2393be6ed9be136bab3d01e4e7.addTo(map_c500556dd786c5b8d615c80a450e31cb);
+        
+    
+            var marker_cluster_5743c2665010f0c520b5ad799f7bf971 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_c1631ce7856373fc28afc951f05420e4 = L.circleMarker(
+                [45.5017, -73.5673],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_34b14f06bb0fc84406a8e0dbfb44d0bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2cc9708915f6f02be6580167de3c4cf5 = $(`<div id="html_2cc9708915f6f02be6580167de3c4cf5" style="width: 100.0%; height: 100.0%;">City: Montreal<br>Visitor: Catherine Harisson<br>Division: DRR<br>Conference: CASCA</div>`)[0];
+                popup_34b14f06bb0fc84406a8e0dbfb44d0bb.setContent(html_2cc9708915f6f02be6580167de3c4cf5);
+            
+        
+
+        circle_marker_c1631ce7856373fc28afc951f05420e4.bindPopup(popup_34b14f06bb0fc84406a8e0dbfb44d0bb)
+        ;
+
+        
+    
+    
+            var circle_marker_d58814ca4849f6634a337b07dad7d451 = L.circleMarker(
+                [49.2827, -123.1207],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_e231642b0269124d0363210795c15aed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cbbba4ee7d30ccd4edbf6182b7b19c36 = $(`<div id="html_cbbba4ee7d30ccd4edbf6182b7b19c36" style="width: 100.0%; height: 100.0%;">City: Vancouver<br>Visitor: Sarah Overington<br>Division: DRR<br>Conference: SAP LRP</div>`)[0];
+                popup_e231642b0269124d0363210795c15aed.setContent(html_cbbba4ee7d30ccd4edbf6182b7b19c36);
+            
+        
+
+        circle_marker_d58814ca4849f6634a337b07dad7d451.bindPopup(popup_e231642b0269124d0363210795c15aed)
+        ;
+
+        
+    
+    
+            var circle_marker_6b165d1f4c0ee32d9d63990cac6158eb = L.circleMarker(
+                [45.4215, -75.6972],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_978f8e253a39ec035f3e1fa2527c7448 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea078a471036180555835dac6e3f360e = $(`<div id="html_ea078a471036180555835dac6e3f360e" style="width: 100.0%; height: 100.0%;">City: Ottawa<br>Visitor: Sarah Overington et al.<br>Division: DRR<br>Conference: CAP Congress</div>`)[0];
+                popup_978f8e253a39ec035f3e1fa2527c7448.setContent(html_ea078a471036180555835dac6e3f360e);
+            
+        
+
+        circle_marker_6b165d1f4c0ee32d9d63990cac6158eb.bindPopup(popup_978f8e253a39ec035f3e1fa2527c7448)
+        ;
+
+        
+    
+    
+            var circle_marker_c6450988039ad93804704a2632be7224 = L.circleMarker(
+                [44.6488, -63.5752],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_17b7b94886ca46e273d6e4c87b8a89e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e07745f3e72cf944c434f3f1123ad792 = $(`<div id="html_e07745f3e72cf944c434f3f1123ad792" style="width: 100.0%; height: 100.0%;">City: Halifax<br>Visitor: Tiffany Lancaster<br>Division: DRR<br>Conference: CGU</div>`)[0];
+                popup_17b7b94886ca46e273d6e4c87b8a89e6.setContent(html_e07745f3e72cf944c434f3f1123ad792);
+            
+        
+
+        circle_marker_c6450988039ad93804704a2632be7224.bindPopup(popup_17b7b94886ca46e273d6e4c87b8a89e6)
+        ;
+
+        
+    
+    
+            var circle_marker_b228ed400b779644d925a58556bf327e = L.circleMarker(
+                [47.5615, -52.7126],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_06c23e6dd57800d094cec25304dce563 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_261d9409da3e846e187f62f9092e5e87 = $(`<div id="html_261d9409da3e846e187f62f9092e5e87" style="width: 100.0%; height: 100.0%;">City: St. John's<br>Visitor: Tiffany Lancaster<br>Division: DRR<br>Conference: GAC-MAC</div>`)[0];
+                popup_06c23e6dd57800d094cec25304dce563.setContent(html_261d9409da3e846e187f62f9092e5e87);
+            
+        
+
+        circle_marker_b228ed400b779644d925a58556bf327e.bindPopup(popup_06c23e6dd57800d094cec25304dce563)
+        ;
+
+        
+    
+    
+            var circle_marker_a09258ef27a770704ec162c3ab6efa61 = L.circleMarker(
+                [43.6532, -79.3832],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_f23a5a6c7ec133e41111872d53108aa1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa47ba54c87d66f22a9686d10628d334 = $(`<div id="html_fa47ba54c87d66f22a9686d10628d334" style="width: 100.0%; height: 100.0%;">City: Toronto<br>Visitor: Rachel Klassen & Shanna-Kay Ming<br>Division: DRR<br>Conference: CSC</div>`)[0];
+                popup_f23a5a6c7ec133e41111872d53108aa1.setContent(html_fa47ba54c87d66f22a9686d10628d334);
+            
+        
+
+        circle_marker_a09258ef27a770704ec162c3ab6efa61.bindPopup(popup_f23a5a6c7ec133e41111872d53108aa1)
+        ;
+
+        
+    
+    
+            var circle_marker_d87b98c9f2b465199b68160c6c91d28a = L.circleMarker(
+                [50.4452, -104.6189],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_567e1689bd0849e87c7d58e96eb849ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6e811c5b6f7649bfc08657e4709c368 = $(`<div id="html_f6e811c5b6f7649bfc08657e4709c368" style="width: 100.0%; height: 100.0%;">City: Regina<br>Visitor: Adèle Ngi-Song<br>Division: DRR<br>Conference: CAIMS</div>`)[0];
+                popup_567e1689bd0849e87c7d58e96eb849ac.setContent(html_f6e811c5b6f7649bfc08657e4709c368);
+            
+        
+
+        circle_marker_d87b98c9f2b465199b68160c6c91d28a.bindPopup(popup_567e1689bd0849e87c7d58e96eb849ac)
+        ;
+
+        
+    
+    
+            var circle_marker_bc6d966e331b30c0a4a0fa2b786b6bf4 = L.circleMarker(
+                [43.6532, -79.3832],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_a6c609089a4454430daff8eaa6d98c4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9071f4c17143f5a4caa74ddcb678b8d7 = $(`<div id="html_9071f4c17143f5a4caa74ddcb678b8d7" style="width: 100.0%; height: 100.0%;">City: Toronto<br>Visitor: Rachel Loewen & Sarah Overington<br>Division: DRR<br>Conference: CSEE</div>`)[0];
+                popup_a6c609089a4454430daff8eaa6d98c4b.setContent(html_9071f4c17143f5a4caa74ddcb678b8d7);
+            
+        
+
+        circle_marker_bc6d966e331b30c0a4a0fa2b786b6bf4.bindPopup(popup_a6c609089a4454430daff8eaa6d98c4b)
+        ;
+
+        
+    
+    
+            var circle_marker_3dfe544231da3fc6d603ba97aa312351 = L.circleMarker(
+                [44.2312, -76.486],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_3ebed5639e076c1ee056dc3fd7867761 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4eb17f88909453016844ec396da92b3b = $(`<div id="html_4eb17f88909453016844ec396da92b3b" style="width: 100.0%; height: 100.0%;">City: Kingston<br>Visitor: Sarah Overington<br>Division: DRR<br>Conference: CCDS</div>`)[0];
+                popup_3ebed5639e076c1ee056dc3fd7867761.setContent(html_4eb17f88909453016844ec396da92b3b);
+            
+        
+
+        circle_marker_3dfe544231da3fc6d603ba97aa312351.bindPopup(popup_3ebed5639e076c1ee056dc3fd7867761)
+        ;
+
+        
+    
+    
+            var circle_marker_2ef45e89558b5f26ea30d2cfbfdfee85 = L.circleMarker(
+                [51.1784, -115.5708],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_d29bd7839022c9919b086657c97d3dc6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1edd9ffc4289da198898959b0406beeb = $(`<div id="html_1edd9ffc4289da198898959b0406beeb" style="width: 100.0%; height: 100.0%;">City: Banff<br>Visitor: Nathalie Podeszfinski<br>Division: DRR<br>Conference: U15</div>`)[0];
+                popup_d29bd7839022c9919b086657c97d3dc6.setContent(html_1edd9ffc4289da198898959b0406beeb);
+            
+        
+
+        circle_marker_2ef45e89558b5f26ea30d2cfbfdfee85.bindPopup(popup_d29bd7839022c9919b086657c97d3dc6)
+        ;
+
+        
+    
+    
+            var circle_marker_636ba372fbbf2372a280612459558cf2 = L.circleMarker(
+                [51.0447, -114.0719],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_2a6a755cd8003347cf3d8f1546d8dde5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe772692e1add1c88a060f3232834eb0 = $(`<div id="html_fe772692e1add1c88a060f3232834eb0" style="width: 100.0%; height: 100.0%;">City: Calgary<br>Visitor: Marie-Pierre Schippers<br>Division: DRR<br>Conference: CCWESTT</div>`)[0];
+                popup_2a6a755cd8003347cf3d8f1546d8dde5.setContent(html_fe772692e1add1c88a060f3232834eb0);
+            
+        
+
+        circle_marker_636ba372fbbf2372a280612459558cf2.bindPopup(popup_2a6a755cd8003347cf3d8f1546d8dde5)
+        ;
+
+        
+    
+    
+            var circle_marker_7d05fcd29ce8f579863f3ea4932f1879 = L.circleMarker(
+                [45.5017, -73.5673],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_ecb08441c3ffaab1952dfa0142ddd1db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_919812955c9a2065338ae06401f1294e = $(`<div id="html_919812955c9a2065338ae06401f1294e" style="width: 100.0%; height: 100.0%;">City: Montreal<br>Visitor: Félix Moore<br>Division: DRI<br>Conference: ECE</div>`)[0];
+                popup_ecb08441c3ffaab1952dfa0142ddd1db.setContent(html_919812955c9a2065338ae06401f1294e);
+            
+        
+
+        circle_marker_7d05fcd29ce8f579863f3ea4932f1879.bindPopup(popup_ecb08441c3ffaab1952dfa0142ddd1db)
+        ;
+
+        
+    
+    
+            var circle_marker_2c608b053c61d5f9296e3f78c6956347 = L.circleMarker(
+                [44.2312, -76.486],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_4634838f102396b179c7e74b8ea56f8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab05a74183bbf0228ed4e7ee74241043 = $(`<div id="html_ab05a74183bbf0228ed4e7ee74241043" style="width: 100.0%; height: 100.0%;">City: Kingston<br>Visitor: Katherine MacLean<br>Division: DRI<br>Conference: ORS</div>`)[0];
+                popup_4634838f102396b179c7e74b8ea56f8d.setContent(html_ab05a74183bbf0228ed4e7ee74241043);
+            
+        
+
+        circle_marker_2c608b053c61d5f9296e3f78c6956347.bindPopup(popup_4634838f102396b179c7e74b8ea56f8d)
+        ;
+
+        
+    
+    
+            var circle_marker_04ba1bb702161d8513370c956d849dc0 = L.circleMarker(
+                [46.8139, -71.208],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_91df78d763cd52dd53282d21c5ad05e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b3dc5562ec7b05b41503f948f4aa29c = $(`<div id="html_9b3dc5562ec7b05b41503f948f4aa29c" style="width: 100.0%; height: 100.0%;">City: Quebec<br>Visitor: Katherine MacLean<br>Division: DRI<br>Conference: CSCE</div>`)[0];
+                popup_91df78d763cd52dd53282d21c5ad05e6.setContent(html_9b3dc5562ec7b05b41503f948f4aa29c);
+            
+        
+
+        circle_marker_04ba1bb702161d8513370c956d849dc0.bindPopup(popup_91df78d763cd52dd53282d21c5ad05e6)
+        ;
+
+        
+    
+    
+            var circle_marker_0d08c9c5f55a96d31964ab0fe2a5db77 = L.circleMarker(
+                [49.2827, -123.1207],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_41ef7519cb45d14a8f4e2deb95ba19e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_800c5726fb6a0a4b85dfcd3b96f527b8 = $(`<div id="html_800c5726fb6a0a4b85dfcd3b96f527b8" style="width: 100.0%; height: 100.0%;">City: Vancouver<br>Visitor: Sarah Tremblay<br>Division: DRI<br>Conference: CSME</div>`)[0];
+                popup_41ef7519cb45d14a8f4e2deb95ba19e1.setContent(html_800c5726fb6a0a4b85dfcd3b96f527b8);
+            
+        
+
+        circle_marker_0d08c9c5f55a96d31964ab0fe2a5db77.bindPopup(popup_41ef7519cb45d14a8f4e2deb95ba19e1)
+        ;
+
+        
+    
+    
+            var circle_marker_ae4efd29e7ff7262386de458405b61b9 = L.circleMarker(
+                [53.5461, -113.4938],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_4410e719fec3951eaebd325ea649d7ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d67aae422fed747ddb80cfb4c511290 = $(`<div id="html_5d67aae422fed747ddb80cfb4c511290" style="width: 100.0%; height: 100.0%;">City: Edmonton<br>Visitor: Kristen Marshall<br>Division: DRI<br>Conference: Microbio</div>`)[0];
+                popup_4410e719fec3951eaebd325ea649d7ed.setContent(html_5d67aae422fed747ddb80cfb4c511290);
+            
+        
+
+        circle_marker_ae4efd29e7ff7262386de458405b61b9.bindPopup(popup_4410e719fec3951eaebd325ea649d7ed)
+        ;
+
+        
+    
+    
+            var circle_marker_a2ba17e92595fd59341481158f1ac5ab = L.circleMarker(
+                [45.4215, -75.6972],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_c5415a4c94af1f56e8d2c13d26716faf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e41bd51e362f7800e1adc6aaa592694e = $(`<div id="html_e41bd51e362f7800e1adc6aaa592694e" style="width: 100.0%; height: 100.0%;">City: Ottawa<br>Visitor: Rebecca Ganz<br>Division: DRI<br>Conference: Zoologists</div>`)[0];
+                popup_c5415a4c94af1f56e8d2c13d26716faf.setContent(html_e41bd51e362f7800e1adc6aaa592694e);
+            
+        
+
+        circle_marker_a2ba17e92595fd59341481158f1ac5ab.bindPopup(popup_c5415a4c94af1f56e8d2c13d26716faf)
+        ;
+
+        
+    
+    
+            var circle_marker_b37ee83b94321ab11822745e5b496136 = L.circleMarker(
+                [49.8951, -97.1384],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_d5b7977f6b5973bbfa357d7deebb749e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5561e8be203a970e5ef5ebf703ce54e5 = $(`<div id="html_5561e8be203a970e5ef5ebf703ce54e5" style="width: 100.0%; height: 100.0%;">City: Winnipeg<br>Visitor: Kristina Archibald<br>Division: DRI<br>Conference: Engineers</div>`)[0];
+                popup_d5b7977f6b5973bbfa357d7deebb749e.setContent(html_5561e8be203a970e5ef5ebf703ce54e5);
+            
+        
+
+        circle_marker_b37ee83b94321ab11822745e5b496136.bindPopup(popup_d5b7977f6b5973bbfa357d7deebb749e)
+        ;
+
+        
+    
+    
+            var circle_marker_727dc47b013069dc3adf16623aaa6ae9 = L.circleMarker(
+                [43.6532, -79.3832],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_ed05d370f68c54895aaf1df4321604f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccccce6961a19425a1ac1b920ff305f8 = $(`<div id="html_ccccce6961a19425a1ac1b920ff305f8" style="width: 100.0%; height: 100.0%;">City: Toronto<br>Visitor: Kelly Anne Hoop & Travis Jones<br>Division: DRI<br>Conference: Indigenous Sci</div>`)[0];
+                popup_ed05d370f68c54895aaf1df4321604f9.setContent(html_ccccce6961a19425a1ac1b920ff305f8);
+            
+        
+
+        circle_marker_727dc47b013069dc3adf16623aaa6ae9.bindPopup(popup_ed05d370f68c54895aaf1df4321604f9)
+        ;
+
+        
+    
+    
+            var circle_marker_62ecb1f9ce9828be509f565b576612b3 = L.circleMarker(
+                [43.6532, -79.3832],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_5743c2665010f0c520b5ad799f7bf971);
+        
+    
+        var popup_e4e33c5134dce1d8b5acc7ade603298e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f9abc39f5fe2e208f5e9c79ef5cb06a = $(`<div id="html_8f9abc39f5fe2e208f5e9c79ef5cb06a" style="width: 100.0%; height: 100.0%;">City: Toronto<br>Visitor: Kevin Parker<br>Division: DRI<br>Conference: CSBBCS</div>`)[0];
+                popup_e4e33c5134dce1d8b5acc7ade603298e.setContent(html_8f9abc39f5fe2e208f5e9c79ef5cb06a);
+            
+        
+
+        circle_marker_62ecb1f9ce9828be509f565b576612b3.bindPopup(popup_e4e33c5134dce1d8b5acc7ade603298e)
+        ;
+
+        
+    
+    
+            marker_cluster_5743c2665010f0c520b5ad799f7bf971.addTo(map_c500556dd786c5b8d615c80a450e31cb);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_c500556dd786c5b8d615c80a450e31cb.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {
+  "position": "bottomleft",
+  "minSpeed": 0.1,
+  "maxSpeed": 10,
+  "autoPlay": true,
+  "loopButton": false,
+  "timeSliderDragUpdate": false,
+  "speedSlider": true,
+  "playerOptions": {
+  "transitionTime": 200,
+  "loop": true,
+  "startOver": true,
+},
+}
+            );
+            map_c500556dd786c5b8d615c80a450e31cb.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.5673, 45.5017]}, "properties": {"time": "2026-06-09", "popup": "City: Montreal<br>Visitor: Catherine Harisson<br>Division: DRR<br>Conference: CASCA", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-123.1207, 49.2827]}, "properties": {"time": "2026-04-15", "popup": "City: Vancouver<br>Visitor: Sarah Overington<br>Division: DRR<br>Conference: SAP LRP", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-75.6972, 45.4215]}, "properties": {"time": "2026-06-22", "popup": "City: Ottawa<br>Visitor: Sarah Overington et al.<br>Division: DRR<br>Conference: CAP Congress", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-63.5752, 44.6488]}, "properties": {"time": "2026-05-24", "popup": "City: Halifax<br>Visitor: Tiffany Lancaster<br>Division: DRR<br>Conference: CGU", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-52.7126, 47.5615]}, "properties": {"time": "2026-05-25", "popup": "City: St. John's<br>Visitor: Tiffany Lancaster<br>Division: DRR<br>Conference: GAC-MAC", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.3832, 43.6532]}, "properties": {"time": "2026-05-24", "popup": "City: Toronto<br>Visitor: Rachel Klassen & Shanna-Kay Ming<br>Division: DRR<br>Conference: CSC", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-104.6189, 50.4452]}, "properties": {"time": "2026-06-15", "popup": "City: Regina<br>Visitor: Ad\u00e8le Ngi-Song<br>Division: DRR<br>Conference: CAIMS", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.3832, 43.6532]}, "properties": {"time": "2026-05-11", "popup": "City: Toronto<br>Visitor: Rachel Loewen & Sarah Overington<br>Division: DRR<br>Conference: CSEE", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-76.486, 44.2312]}, "properties": {"time": "2026-05-21", "popup": "City: Kingston<br>Visitor: Sarah Overington<br>Division: DRR<br>Conference: CCDS", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-115.5708, 51.1784]}, "properties": {"time": "2026-06-23", "popup": "City: Banff<br>Visitor: Nathalie Podeszfinski<br>Division: DRR<br>Conference: U15", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-114.0719, 51.0447]}, "properties": {"time": "2026-05-23", "popup": "City: Calgary<br>Visitor: Marie-Pierre Schippers<br>Division: DRR<br>Conference: CCWESTT", "icon": "circle", "iconstyle": {"color": "blue", "fillColor": "blue"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.5673, 45.5017]}, "properties": {"time": "2026-05-18", "popup": "City: Montreal<br>Visitor: F\u00e9lix Moore<br>Division: DRI<br>Conference: ECE", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-76.486, 44.2312]}, "properties": {"time": "2026-06-08", "popup": "City: Kingston<br>Visitor: Katherine MacLean<br>Division: DRI<br>Conference: ORS", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-71.208, 46.8139]}, "properties": {"time": "2026-06-03", "popup": "City: Quebec<br>Visitor: Katherine MacLean<br>Division: DRI<br>Conference: CSCE", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-123.1207, 49.2827]}, "properties": {"time": "2026-05-24", "popup": "City: Vancouver<br>Visitor: Sarah Tremblay<br>Division: DRI<br>Conference: CSME", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-113.4938, 53.5461]}, "properties": {"time": "2026-06-16", "popup": "City: Edmonton<br>Visitor: Kristen Marshall<br>Division: DRI<br>Conference: Microbio", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-75.6972, 45.4215]}, "properties": {"time": "2026-05-11", "popup": "City: Ottawa<br>Visitor: Rebecca Ganz<br>Division: DRI<br>Conference: Zoologists", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-97.1384, 49.8951]}, "properties": {"time": "2026-04-26", "popup": "City: Winnipeg<br>Visitor: Kristina Archibald<br>Division: DRI<br>Conference: Engineers", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.3832, 43.6532]}, "properties": {"time": "2026-05-24", "popup": "City: Toronto<br>Visitor: Kelly Anne Hoop & Travis Jones<br>Division: DRI<br>Conference: Indigenous Sci", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.3832, 43.6532]}, "properties": {"time": "2026-06-01", "popup": "City: Toronto<br>Visitor: Kevin Parker<br>Division: DRI<br>Conference: CSBBCS", "icon": "circle", "iconstyle": {"color": "green", "fillColor": "green"}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_fff4252d8a5f9311edbbbd4e556e2131 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_c500556dd786c5b8d615c80a450e31cb);
+        
+</script>
+</body></html>
